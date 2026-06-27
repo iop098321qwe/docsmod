@@ -1,0 +1,26 @@
+{
+  "name": "docsmod",
+  "version": "0.0.0",
+  "description": "Module for working with zensical docs in an easier and more streamlined way.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iop098321qwe/docsmod.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/iop098321qwe/docsmod/issues"
+  },
+  "homepage": "https://github.com/iop098321qwe/docsmod#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^21.1.0",
+    "@commitlint/config-conventional": "^21.1.0",
+    "husky": "^9.1.7"
+  }
+}
