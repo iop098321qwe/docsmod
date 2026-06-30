@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 docbuild() {
+  use_gum=0
   module_dir=""
   prettier_module=""
   repo_root="$(git rev-parse --show-toplevel 2>/dev/null || printf '')"
@@ -11,6 +12,10 @@ docbuild() {
     CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" 2>/dev/null && pwd
   )" || module_dir=""
   prettier_module="${module_dir}/../prettiermod/cbc-module.sh"
+
+  if command -v gum >/dev/null 2>&1; then
+    use_gum=1
+  fi
 
   if [ -n "${repo_root}" ]; then
     workdir="${repo_root}"
@@ -46,6 +51,17 @@ docbuild() {
   (
     set -eu
 
+    run_git_step() {
+      local title="$1"
+      shift
+
+      if [ "${use_gum}" -eq 1 ]; then
+        gum spin --spinner dot --show-error --title "${title}" -- "$@"
+      else
+        "$@"
+      fi
+    }
+
     cd "${workdir}"
 
     if [ ! -f ".venv/bin/activate" ]; then
@@ -68,6 +84,12 @@ docbuild() {
       exit 1
     fi
 
+    if ! command -v zensical >/dev/null 2>&1; then
+      printf '%s\n' 'docbuild: missing zensical command in the active venv' \
+        >&2
+      exit 1
+    fi
+
     zensical build --clean
     pretty all -d site -- --no-error-on-unmatched-pattern
 
@@ -77,14 +99,22 @@ docbuild() {
       exit 0
     fi
 
-    git add --all -- site/
+    if ! run_git_step "Staging site changes..." git add --all -- site/; then
+      exit 1
+    fi
 
     if git diff --cached --quiet -- site/; then
       printf 'docbuild: no site/ changes to commit\n'
       exit 0
     fi
 
-    git commit -m "build(site): build zensical docs site" -- site/
-    git push
+    if ! run_git_step "Creating site build commit..." \
+      git commit -m "build(site): build zensical docs site" -- site/; then
+      exit 1
+    fi
+
+    if ! run_git_step "Pushing current branch..." git push; then
+      exit 1
+    fi
   )
 }
