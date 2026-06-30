@@ -1,997 +1,1423 @@
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-        <meta name="description" content="A new project generated from the default template project.">
-      
-      
-        <meta name="author" content="<your name here>">
-      
-      
-      
-        <link rel="prev" href="./..">
-      
-      
-      
-        
-      
-      
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="zensical-0.0.46">
-    
-    
-      
-        <title>AGENTS.md - docsmod</title>
-      
-    
-    
-      
-        
-      
-      <link rel="stylesheet" href="../assets/stylesheets/modern/main.19d3147f.min.css">
-      
-        
-          
-        
-        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
-      
-      
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+    <meta
+      name="description"
+      content="A new project generated from the default template project."
+    />
 
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
-        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
-    
-      
+    <meta name="author" content="<your name here>" />
 
-    
-    
+    <link rel="prev" href="./.." />
+
+    <link rel="icon" href="../assets/images/favicon.png" />
+    <meta name="generator" content="zensical-0.0.46" />
+
+    <title>AGENTS.md - docsmod</title>
+
+    <link
+      rel="stylesheet"
+      href="../assets/stylesheets/modern/main.19d3147f.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../assets/stylesheets/modern/palette.dfe2e883.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback"
+    />
+    <style>
+      :root {
+        --md-text-font: "Inter";
+        --md-code-font: "JetBrains Mono";
+      }
+    </style>
+
+    <script>
+      ((__md_scope = new URL("..", location)),
+        __md_scope.pathname.endsWith("/") ||
+          (__md_scope = new URL(__md_scope.pathname + "/", location)),
+        (__md_hash = (e) =>
+          [...e].reduce((e, t) => (e << 5) - e + t.charCodeAt(0), 0)),
+        (__md_get = (e, t = localStorage, _ = __md_scope) =>
+          JSON.parse(t.getItem(_.pathname + "." + e))),
+        (__md_set = (e, t, _ = localStorage, a = __md_scope) => {
+          try {
+            _.setItem(a.pathname + "." + e, JSON.stringify(t));
+          } catch (e) {}
+        }),
+        document.documentElement.setAttribute(
+          "data-platform",
+          navigator.platform,
+        ));
+    </script>
   </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+
+  <body
+    dir="ltr"
+    data-md-color-scheme="default"
+    data-md-color-primary="indigo"
+    data-md-color-accent="indigo"
+  >
+    <input
+      class="md-toggle"
+      data-md-toggle="drawer"
+      type="checkbox"
+      id="__drawer"
+      autocomplete="off"
+    />
+    <input
+      class="md-toggle"
+      data-md-toggle="search"
+      type="checkbox"
+      id="__search"
+      autocomplete="off"
+    />
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#agentsmd" class="md-skip">
-          Skip to content
+      <a href="#agentsmd" class="md-skip"> Skip to content </a>
+    </div>
+    <div data-md-component="announce"></div>
+
+    <header class="md-header md-header--shadow" data-md-component="header">
+      <nav class="md-header__inner md-grid" aria-label="Header">
+        <a
+          href="./.."
+          title="docsmod"
+          class="md-header__button md-logo"
+          aria-label="docsmod"
+          data-md-component="logo"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="lucide lucide-book-open"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+            />
+          </svg>
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="./.." title="docsmod" class="md-header__button md-logo" aria-label="docsmod" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            docsmod
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              AGENTS.md
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search" aria-label="Search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        <label
+          class="md-header__button md-icon"
+          for="__drawer"
+          aria-label="Navigation"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="lucide lucide-menu"
+            viewBox="0 0 24 24"
+          >
+            <path d="M4 5h16M4 12h16M4 19h16" />
+          </svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
-  <button type="button" class="md-search__button">
-    Search
-  </button>
-</div>
-      
-    
-    <div class="md-header__source">
-      
-    </div>
-  </nav>
-  
-</header>
-    
+        <div class="md-header__title" data-md-component="header-title">
+          <div class="md-header__ellipsis">
+            <div class="md-header__topic">
+              <span class="md-ellipsis"> docsmod </span>
+            </div>
+            <div class="md-header__topic" data-md-component="header-topic">
+              <span class="md-ellipsis"> AGENTS.md </span>
+            </div>
+          </div>
+        </div>
+
+        <form class="md-header__option" data-md-component="palette">
+          <input
+            class="md-option"
+            data-md-color-media="none"
+            data-md-color-scheme="default"
+            data-md-color-primary="indigo"
+            data-md-color-accent="indigo"
+            aria-label="Switch to dark mode"
+            type="radio"
+            name="__palette"
+            id="__palette_0"
+          />
+
+          <label
+            class="md-header__button md-icon"
+            title="Switch to dark mode"
+            for="__palette_1"
+            hidden
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="lucide lucide-sun"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+              />
+            </svg>
+          </label>
+
+          <input
+            class="md-option"
+            data-md-color-media="none"
+            data-md-color-scheme="slate"
+            data-md-color-primary="indigo"
+            data-md-color-accent="indigo"
+            aria-label="Switch to light mode"
+            type="radio"
+            name="__palette"
+            id="__palette_1"
+          />
+
+          <label
+            class="md-header__button md-icon"
+            title="Switch to light mode"
+            for="__palette_0"
+            hidden
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="lucide lucide-moon"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+              />
+            </svg>
+          </label>
+        </form>
+
+        <script>
+          var palette = __md_get("__palette");
+          if (palette && palette.color) {
+            if ("(prefers-color-scheme)" === palette.color.media) {
+              var media = matchMedia("(prefers-color-scheme: light)"),
+                input = document.querySelector(
+                  media.matches
+                    ? "[data-md-color-media='(prefers-color-scheme: light)']"
+                    : "[data-md-color-media='(prefers-color-scheme: dark)']",
+                );
+              ((palette.color.media = input.getAttribute(
+                "data-md-color-media",
+              )),
+                (palette.color.scheme = input.getAttribute(
+                  "data-md-color-scheme",
+                )),
+                (palette.color.primary = input.getAttribute(
+                  "data-md-color-primary",
+                )),
+                (palette.color.accent = input.getAttribute(
+                  "data-md-color-accent",
+                )));
+            }
+            for (var [key, value] of Object.entries(palette.color))
+              document.body.setAttribute("data-md-color-" + key, value);
+          }
+        </script>
+
+        <label
+          class="md-header__button md-icon"
+          for="__search"
+          aria-label="Search"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="lucide lucide-search"
+            viewBox="0 0 24 24"
+          >
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
+          </svg>
+        </label>
+        <div
+          class="md-search"
+          data-md-component="search"
+          role="dialog"
+          aria-label="Search"
+        >
+          <button type="button" class="md-search__button">Search</button>
+        </div>
+
+        <div class="md-header__source"></div>
+      </nav>
+    </header>
+
     <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
+          <div
+            class="md-sidebar md-sidebar--primary"
+            data-md-component="sidebar"
+            data-md-type="navigation"
+          >
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav
+                  class="md-nav md-nav--primary"
+                  aria-label="Navigation"
+                  data-md-level="0"
+                >
+                  <label class="md-nav__title" for="__drawer">
+                    <a
+                      href="./.."
+                      title="docsmod"
+                      class="md-nav__button md-logo"
+                      aria-label="docsmod"
+                      data-md-component="logo"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="lucide lucide-book-open"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+                        />
+                      </svg>
+                    </a>
+                    docsmod
+                  </label>
 
+                  <ul class="md-nav__list" data-md-scrollfix>
+                    <li class="md-nav__item">
+                      <a href="./.." class="md-nav__link">
+                        <span class="md-ellipsis"> Docsmod </span>
+                      </a>
+                    </li>
 
+                    <li class="md-nav__item md-nav__item--active">
+                      <label
+                        class="md-nav__link md-nav__link--active"
+                        for="__toc"
+                      >
+                        <span class="md-ellipsis"> AGENTS.md </span>
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="./.." title="docsmod" class="md-nav__button md-logo" aria-label="docsmod" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+                        <span class="md-nav__icon md-icon"></span>
+                      </label>
 
-    </a>
-    docsmod
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="./.." class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Docsmod
+                      <a href="././" class="md-nav__link md-nav__link--active">
+                        <span class="md-ellipsis"> AGENTS.md </span>
+                      </a>
 
-    
-  </span>
-  
-  
+                      <nav
+                        class="md-nav md-nav--secondary"
+                        aria-label="On this page"
+                      >
+                        <label class="md-nav__title" for="__toc">
+                          <span class="md-nav__icon md-icon"></span>
+                          On this page
+                        </label>
+                        <ul
+                          class="md-nav__list"
+                          data-md-component="toc"
+                          data-md-scrollfix
+                        >
+                          <li class="md-nav__item">
+                            <a href="#purpose" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset"> Purpose </span>
+                              </span>
+                            </a>
+                          </li>
 
-      </a>
-    </li>
-  
+                          <li class="md-nav__item">
+                            <a href="#scope" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset"> Scope </span>
+                              </span>
+                            </a>
+                          </li>
 
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  AGENTS.md
+                          <li class="md-nav__item">
+                            <a href="#formatting-rules" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset">
+                                  Formatting Rules
+                                </span>
+                              </span>
+                            </a>
+                          </li>
 
-    
-  </span>
-  
-  
+                          <li class="md-nav__item">
+                            <a href="#quick-start" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset"> Quick Start </span>
+                              </span>
+                            </a>
+                          </li>
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="././" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  AGENTS.md
+                          <li class="md-nav__item">
+                            <a href="#environment" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset"> Environment </span>
+                              </span>
+                            </a>
+                          </li>
 
-    
-  </span>
-  
-  
+                          <li class="md-nav__item">
+                            <a href="#repository-overview" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset">
+                                  Repository Overview
+                                </span>
+                              </span>
+                            </a>
+                          </li>
 
-      </a>
-      
-        
+                          <li class="md-nav__item">
+                            <a
+                              href="#tracked-files-overview"
+                              class="md-nav__link"
+                            >
+                              <span class="md-ellipsis">
+                                <span class="md-typeset">
+                                  Tracked Files Overview
+                                </span>
+                              </span>
+                            </a>
+                          </li>
 
+                          <li class="md-nav__item">
+                            <a href="#architecture" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset"> Architecture </span>
+                              </span>
+                            </a>
+                          </li>
 
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Purpose
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scope" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Scope
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#formatting-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Formatting Rules
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Quick Start
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Environment
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#repository-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Repository Overview
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tracked-files-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Tracked Files Overview
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Architecture
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Commands
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Testing
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#linting-and-formatting" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Linting and Formatting
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ci-and-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        CI and Release
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Conventions
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#security-and-compliance" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Security and Compliance
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies-and-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Dependencies and Services
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Troubleshooting
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#refining-existing-agentsmd" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Refining Existing AGENTS.md
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintenance" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Maintenance
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
+                          <li class="md-nav__item">
+                            <a href="#commands" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset"> Commands </span>
+                              </span>
+                            </a>
+                          </li>
 
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
+                          <li class="md-nav__item">
+                            <a href="#testing" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset"> Testing </span>
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="md-nav__item">
+                            <a
+                              href="#linting-and-formatting"
+                              class="md-nav__link"
+                            >
+                              <span class="md-ellipsis">
+                                <span class="md-typeset">
+                                  Linting and Formatting
+                                </span>
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="md-nav__item">
+                            <a href="#ci-and-release" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset"> CI and Release </span>
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="md-nav__item">
+                            <a href="#conventions" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset"> Conventions </span>
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="md-nav__item">
+                            <a
+                              href="#security-and-compliance"
+                              class="md-nav__link"
+                            >
+                              <span class="md-ellipsis">
+                                <span class="md-typeset">
+                                  Security and Compliance
+                                </span>
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="md-nav__item">
+                            <a
+                              href="#dependencies-and-services"
+                              class="md-nav__link"
+                            >
+                              <span class="md-ellipsis">
+                                <span class="md-typeset">
+                                  Dependencies and Services
+                                </span>
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="md-nav__item">
+                            <a href="#troubleshooting" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset">
+                                  Troubleshooting
+                                </span>
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="md-nav__item">
+                            <a
+                              href="#refining-existing-agentsmd"
+                              class="md-nav__link"
+                            >
+                              <span class="md-ellipsis">
+                                <span class="md-typeset">
+                                  Refining Existing AGENTS.md
+                                </span>
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="md-nav__item">
+                            <a href="#maintenance" class="md-nav__link">
+                              <span class="md-ellipsis">
+                                <span class="md-typeset"> Maintenance </span>
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </li>
+                  </ul>
+                </nav>
               </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  
-                    
-                    
-                    
-                      
-                    
-                    
-                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-                      <div class="md-sidebar-button__wrapper">
-                        <label class="md-sidebar-button" for="__toc"></label>
-                      </div>
-                    
-                  
-                  <div class="md-sidebar__inner">
-                    
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Purpose
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scope" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Scope
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#formatting-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Formatting Rules
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Quick Start
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Environment
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#repository-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Repository Overview
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tracked-files-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Tracked Files Overview
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Architecture
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Commands
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Testing
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#linting-and-formatting" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Linting and Formatting
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ci-and-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        CI and Release
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Conventions
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#security-and-compliance" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Security and Compliance
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies-and-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Dependencies and Services
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Troubleshooting
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#refining-existing-agentsmd" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Refining Existing AGENTS.md
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintenance" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Maintenance
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              
-                
-
-
-
-  
-
-
-              
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-<h1 id="agentsmd">AGENTS.md<a class="headerlink" href="#agentsmd" title="Permanent link">&para;</a></h1>
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>This file guides AI coding agents working in <code>docsmod</code>.
-All work must follow best practices and industry standards where
-applicable.</p>
-<h2 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h2>
-<p>This file covers repository-wide expectations for code, docs, and git
-work.
-It does not replace verified instructions in source files, tooling
-configs,
-or release automation.</p>
-<h2 id="formatting-rules">Formatting Rules<a class="headerlink" href="#formatting-rules" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Keep lines at 80 characters or fewer when practical.</li>
-<li>Allow longer lines only for URLs, code blocks, hashes, or commands
-  that cannot be wrapped cleanly.</li>
-</ul>
-<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Read <code>README.md</code> first for project context and setup notes.</li>
-<li>Run <code>git status --short --branch</code> before editing to confirm repo
-  state.</li>
-<li>Run <code>git diff --stat</code> before committing to review the change scope.</li>
-<li>Verification needed: add authoritative setup, run, or build
-  commands when this repository defines them.</li>
-</ul>
-<h2 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Git is required for day-to-day work in this repository.</li>
-<li>Verification needed: document runtime versions, package managers,
-  and env vars when they exist.</li>
-</ul>
-<h2 id="repository-overview">Repository Overview<a class="headerlink" href="#repository-overview" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Root files hold the initial project overview, license, and repo
-  policies.</li>
-<li>Verification needed: add top-level directories here when the repo
-  grows.</li>
-</ul>
-<h2 id="tracked-files-overview">Tracked Files Overview<a class="headerlink" href="#tracked-files-overview" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>AGENTS.md</code>: AI coding agent instructions for this repository.</li>
-<li><code>cbc-module.sh</code>: CBC module entrypoint and shell workflow functions.</li>
-<li><code>done.txt</code>: Root completed task list placeholder for bootstrap workflows.</li>
-<li><code>inbox.txt.tuxedo-lock</code>: Blank Tuxedo inbox lock file created alongside todo.txt.</li>
-<li><code>LICENSE</code>: Project license text.</li>
-<li><code>README.md</code>: Primary repository overview and setup notes.</li>
-<li><code>todo.txt</code>: Root task list placeholder for bootstrap workflows.</li>
-</ul>
-<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<ul>
-<li>This repository starts from a minimal scaffold and may not define
-  subsystems yet.</li>
-<li>Verification needed: describe components, boundaries, and data flow
-  after they are introduced.</li>
-</ul>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>git status --short --branch</code>: show the current branch and worktree
-  state.</li>
-<li><code>git diff --stat</code>: review the size and spread of pending changes.</li>
-<li><code>git log --oneline --decorate -5</code>: inspect recent commit history.</li>
-<li>Verification needed: document authoritative build, run, lint, and
-  task commands when the repository defines them.</li>
-</ul>
-<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Verification needed: add test commands and expectations when tests
-  exist.</li>
-<li>Do not claim coverage, test gates, or suites that are not verified.</li>
-</ul>
-<h2 id="linting-and-formatting">Linting and Formatting<a class="headerlink" href="#linting-and-formatting" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Verification needed: add formatter and linter commands after they
-  are introduced.</li>
-<li>Keep changes minimal and consistent with the existing code style.</li>
-</ul>
-<h2 id="ci-and-release">CI and Release<a class="headerlink" href="#ci-and-release" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Use Conventional Commits for every commit. Prefer a scope when it
-  adds clarity.</li>
-<li>Never create, edit, or update <code>CHANGELOG.md</code> manually.</li>
-<li><code>CHANGELOG.md</code> is generated and maintained by release tooling only.</li>
-<li>If release automation adds or changes generated files, let the
-  tooling own those updates.</li>
-</ul>
-<h2 id="conventions">Conventions<a class="headerlink" href="#conventions" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Use small, correct changes that fit the existing project structure.</li>
-<li>Verify behavior from the actual codebase before documenting or
-  changing it.</li>
-<li>Keep <code>AGENTS.md</code> as instructions, not as a changelog, diary, or work
-  log.</li>
-<li>Do not add update notes, status logs, or change summaries to
-  <code>AGENTS.md</code>.</li>
-</ul>
-<h2 id="security-and-compliance">Security and Compliance<a class="headerlink" href="#security-and-compliance" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Never commit secrets, credentials, tokens, or private keys.</li>
-<li>Verify new dependencies, automation, and scripts before trusting
-  them.</li>
-</ul>
-<h2 id="dependencies-and-services">Dependencies and Services<a class="headerlink" href="#dependencies-and-services" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Verification needed: document external services, databases, queues,
-  or storage when they are added.</li>
-<li>Avoid assuming any third-party service exists until the repo proves
-  it.</li>
-</ul>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<ul>
-<li>If repo behavior is unclear, inspect tracked files and git history
-  before making assumptions.</li>
-<li>If a generated or managed file changes unexpectedly, verify which
-  tool owns it before editing.</li>
-</ul>
-<h2 id="refining-existing-agentsmd">Refining Existing AGENTS.md<a class="headerlink" href="#refining-existing-agentsmd" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Re-check every statement against the repository before keeping it.</li>
-<li>Remove stale, duplicated, or vague guidance.</li>
-<li>Replace placeholders with exact commands, paths, and verified
-  workflows.</li>
-<li>Keep bullets short and easy for AI agents to scan.</li>
-<li>Preserve this section order when improving the file.</li>
-</ul>
-<h2 id="maintenance">Maintenance<a class="headerlink" href="#maintenance" title="Permanent link">&para;</a></h2>
-<ul>
-<li>After any code, config, or doc change, verify that <code>AGENTS.md</code> still
-  matches the repository.</li>
-<li>When <code>AGENTS.md</code> needs an update, make it in a separate <code>docs</code>
-  Conventional Commit such as <code>docs(agents): update repo instructions</code>.</li>
-<li>Keep <code>AGENTS.md</code> out of mixed code commits whenever possible.</li>
-<li>Remove stale instructions instead of appending historical notes.</li>
-</ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
             </div>
-          
-          
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+          </div>
 
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+          <div
+            class="md-sidebar md-sidebar--secondary"
+            data-md-component="sidebar"
+            data-md-type="toc"
+          >
+            <div class="md-sidebar__scrollwrap">
+              <input
+                class="md-nav__toggle md-toggle"
+                type="checkbox"
+                id="__toc"
+              />
+              <div class="md-sidebar-button__wrapper">
+                <label class="md-sidebar-button" for="__toc"></label>
+              </div>
+
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--secondary" aria-label="On this page">
+                  <label class="md-nav__title" for="__toc">
+                    <span class="md-nav__icon md-icon"></span>
+                    On this page
+                  </label>
+                  <ul
+                    class="md-nav__list"
+                    data-md-component="toc"
+                    data-md-scrollfix
+                  >
+                    <li class="md-nav__item">
+                      <a href="#purpose" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Purpose </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#scope" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Scope </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#formatting-rules" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Formatting Rules </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#quick-start" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Quick Start </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#environment" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Environment </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#repository-overview" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Repository Overview </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#tracked-files-overview" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset">
+                            Tracked Files Overview
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#architecture" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Architecture </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#commands" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Commands </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#testing" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Testing </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#linting-and-formatting" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset">
+                            Linting and Formatting
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#ci-and-release" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> CI and Release </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#conventions" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Conventions </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#security-and-compliance" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset">
+                            Security and Compliance
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#dependencies-and-services" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset">
+                            Dependencies and Services
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#troubleshooting" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Troubleshooting </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a
+                        href="#refining-existing-agentsmd"
+                        class="md-nav__link"
+                      >
+                        <span class="md-ellipsis">
+                          <span class="md-typeset">
+                            Refining Existing AGENTS.md
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="md-nav__item">
+                      <a href="#maintenance" class="md-nav__link">
+                        <span class="md-ellipsis">
+                          <span class="md-typeset"> Maintenance </span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              <h1 id="agentsmd">
+                AGENTS.md<a
+                  class="headerlink"
+                  href="#agentsmd"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h1>
+              <h2 id="purpose">
+                Purpose<a
+                  class="headerlink"
+                  href="#purpose"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <p>
+                This file guides AI coding agents working in
+                <code>docsmod</code>. All work must follow best practices and
+                industry standards where applicable.
+              </p>
+              <h2 id="scope">
+                Scope<a class="headerlink" href="#scope" title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <p>
+                This file covers repository-wide expectations for code, docs,
+                and git work. It does not replace verified instructions in
+                source files, tooling configs, or release automation.
+              </p>
+              <h2 id="formatting-rules">
+                Formatting Rules<a
+                  class="headerlink"
+                  href="#formatting-rules"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>Keep lines at 80 characters or fewer when practical.</li>
+                <li>
+                  Allow longer lines only for URLs, code blocks, hashes, or
+                  commands that cannot be wrapped cleanly.
+                </li>
+              </ul>
+              <h2 id="quick-start">
+                Quick Start<a
+                  class="headerlink"
+                  href="#quick-start"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  Read <code>README.md</code> first for project context and
+                  setup notes.
+                </li>
+                <li>
+                  Run <code>git status --short --branch</code> before editing to
+                  confirm repo state.
+                </li>
+                <li>
+                  Run <code>git diff --stat</code> before committing to review
+                  the change scope.
+                </li>
+                <li>
+                  Source <code>./cbc-module.sh</code> to load the shell workflow
+                  helpers.
+                </li>
+                <li>
+                  Run <code>docbuild</code> from anywhere inside the target
+                  repository; it switches to the repo root before building.
+                </li>
+              </ul>
+              <h2 id="environment">
+                Environment<a
+                  class="headerlink"
+                  href="#environment"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>Git is required for day-to-day work in this repository.</li>
+                <li>
+                  Python is required for <code>zensical</code>; CI installs it
+                  with <code>actions/setup-python@v5</code> using
+                  <code>python-version: 3.x</code>.
+                </li>
+                <li>
+                  Node.js with npm is required for Husky and commitlint in
+                  <code>package.json</code> and <code>package-lock.json</code>.
+                </li>
+                <li>
+                  The local docs workflow expects
+                  <code>.venv/bin/activate</code> to exist and to provide
+                  <code>zensical</code>.
+                </li>
+                <li>
+                  When <code>pretty</code> is not already loaded,
+                  <code>docbuild</code> auto-loads the sibling CBC module at
+                  <code>../prettiermod/cbc-module.sh</code>.
+                </li>
+                <li>
+                  <code>docbuild</code> uses <code>gum confirm</code> for
+                  non-repo confirmation and <code>gum spin</code> for git-step
+                  progress when <code>gum</code> is available; it falls back to
+                  a shell prompt and direct execution otherwise.
+                </li>
+                <li>
+                  Verification needed: pin the exact local Python and Node.js
+                  versions.
+                </li>
+              </ul>
+              <h2 id="repository-overview">
+                Repository Overview<a
+                  class="headerlink"
+                  href="#repository-overview"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  <code>.github/</code>: GitHub Actions workflows including docs
+                  deployment.
+                </li>
+                <li>
+                  <code>.husky/</code>: Git hooks for commit-message linting.
+                </li>
+                <li>
+                  <code>docs/</code>: Markdown source files for the generated
+                  docs site.
+                </li>
+                <li>
+                  <code>site/</code>: Generated static site output committed for
+                  deployment.
+                </li>
+                <li>
+                  Root files: shell helpers, Zensical config, package metadata,
+                  and repo policies.
+                </li>
+              </ul>
+              <h2 id="tracked-files-overview">
+                Tracked Files Overview<a
+                  class="headerlink"
+                  href="#tracked-files-overview"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  <code>.github/workflows/docs.yml</code>: GitHub Pages build
+                  and deploy workflow.
+                </li>
+                <li>
+                  <code>.gitignore</code>: Ignore rules for
+                  <code>.cache/</code>, <code>node_modules/</code>, and
+                  <code>.venv/</code>.
+                </li>
+                <li>
+                  <code>.husky/commit-msg</code>: Commit-message hook that runs
+                  commitlint.
+                </li>
+                <li>
+                  <code>AGENTS.md</code>: Repository-wide AI agent instructions.
+                </li>
+                <li>
+                  <code>cbc-module.sh</code>: Shell helper definitions including
+                  <code>docbuild</code>.
+                </li>
+                <li>
+                  <code>commitlint.config.cjs</code>: Conventional Commit lint
+                  configuration.
+                </li>
+                <li>
+                  <code>docs/AGENTS.md</code>: Published docs copy of the agent
+                  instructions.
+                </li>
+                <li>
+                  <code>docs/README.md</code>: Docs source for the project
+                  overview page.
+                </li>
+                <li>
+                  <code>done.txt</code>: Root completed task list placeholder
+                  for bootstrap workflows.
+                </li>
+                <li>
+                  <code>inbox.txt.tuxedo-lock</code>: Blank Tuxedo inbox lock
+                  file beside <code>todo.txt</code>.
+                </li>
+                <li><code>LICENSE</code>: Project license text.</li>
+                <li>
+                  <code>package-lock.json</code>: npm lockfile for Husky and
+                  commitlint.
+                </li>
+                <li>
+                  <code>package.json</code>: npm metadata plus Husky and
+                  commitlint dependencies.
+                </li>
+                <li>
+                  <code>README.md</code>: Primary repository overview and setup
+                  notes.
+                </li>
+                <li>
+                  <code>site/</code>: Generated docs site committed for GitHub
+                  Pages deployment.
+                </li>
+                <li>
+                  <code>todo.txt</code>: Root task list placeholder that agents
+                  must not touch.
+                </li>
+                <li>
+                  <code>zensical.toml</code>: Zensical site configuration.
+                </li>
+              </ul>
+              <h2 id="architecture">
+                Architecture<a
+                  class="headerlink"
+                  href="#architecture"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li><code>docs/</code> holds the Markdown source content.</li>
+                <li>
+                  <code>docs/AGENTS.md</code> is published into the generated
+                  site.
+                </li>
+                <li>
+                  <code>zensical.toml</code> configures the Zensical build.
+                </li>
+                <li>
+                  <code>cbc-module.sh</code> wraps the local rebuild, format,
+                  commit, and push workflow.
+                </li>
+                <li>
+                  <code>zensical build --clean</code> renders the docs into
+                  <code>site/</code>.
+                </li>
+                <li>
+                  <code>.github/workflows/docs.yml</code> uploads
+                  <code>site/</code> to GitHub Pages on pushes to
+                  <code>main</code> and <code>master</code>.
+                </li>
+              </ul>
+              <h2 id="commands">
+                Commands<a
+                  class="headerlink"
+                  href="#commands"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  <code>git status --short --branch</code>: show the current
+                  branch and worktree state.
+                </li>
+                <li>
+                  <code>git diff --stat</code>: review the size and spread of
+                  pending changes.
+                </li>
+                <li>
+                  <code>git log --oneline --decorate -5</code>: inspect recent
+                  commit history.
+                </li>
+                <li>
+                  <code>source ./cbc-module.sh</code>: load the
+                  <code>docbuild</code> shell function.
+                </li>
+                <li>
+                  <code>docbuild</code>: if run inside a git repo, switch to the
+                  repo root, activate <code>.venv/</code>, run
+                  <code>zensical build --clean</code>, run
+                  <code
+                    >pretty all -d site -- --no-error-on-unmatched-pattern</code
+                  >, commit only <code>site/</code>, and push the current branch
+                  with <code>gum</code> spinners for git operations when
+                  available.
+                </li>
+                <li>
+                  <code>docbuild</code>: if run outside a git repo, warn,
+                  confirm with <code>gum</code> when available, fall back to a
+                  shell prompt otherwise, and proceed in the current directory.
+                </li>
+                <li>
+                  <code
+                    >source .venv/bin/activate &amp;&amp; zensical build
+                    --clean</code
+                  >: build the docs site manually from the repo root.
+                </li>
+                <li>
+                  <code
+                    >pretty all -d site -- --no-error-on-unmatched-pattern</code
+                  >: format the generated docs output.
+                </li>
+                <li>
+                  <code>npm install</code>: install Husky and commitlint for
+                  local git-hook use.
+                </li>
+              </ul>
+              <h2 id="testing">
+                Testing<a
+                  class="headerlink"
+                  href="#testing"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>No automated test suite is defined for this repository.</li>
+                <li>
+                  <code>npm test</code> is a placeholder command in
+                  <code>package.json</code> that exits with status 1.
+                </li>
+                <li>
+                  Do not claim coverage, test gates, or suites that are not
+                  verified.
+                </li>
+              </ul>
+              <h2 id="linting-and-formatting">
+                Linting and Formatting<a
+                  class="headerlink"
+                  href="#linting-and-formatting"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  <code
+                    >pretty all -d site -- --no-error-on-unmatched-pattern</code
+                  >
+                  formats the generated docs output.
+                </li>
+                <li>
+                  <code>.husky/commit-msg</code> runs commitlint against the
+                  commit message file.
+                </li>
+                <li>
+                  <code>commitlint.config.cjs</code> extends
+                  <code>@commitlint/config-conventional</code>.
+                </li>
+                <li>
+                  Keep changes minimal and consistent with the existing code
+                  style.
+                </li>
+              </ul>
+              <h2 id="ci-and-release">
+                CI and Release<a
+                  class="headerlink"
+                  href="#ci-and-release"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  Use Conventional Commits for every commit. Prefer a scope when
+                  it adds clarity.
+                </li>
+                <li>
+                  <code>.github/workflows/docs.yml</code> builds the docs with
+                  <code>zensical build --clean</code> and deploys
+                  <code>site/</code> to GitHub Pages on pushes to
+                  <code>main</code> and <code>master</code>.
+                </li>
+                <li>
+                  Never create, edit, or update
+                  <code>CHANGELOG.md</code> manually.
+                </li>
+                <li>
+                  <code>CHANGELOG.md</code> is generated and maintained by
+                  release tooling only.
+                </li>
+                <li>
+                  If release automation adds or changes generated files, let the
+                  tooling own those updates.
+                </li>
+              </ul>
+              <h2 id="conventions">
+                Conventions<a
+                  class="headerlink"
+                  href="#conventions"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  Use small, correct changes that fit the existing project
+                  structure.
+                </li>
+                <li>
+                  Verify behavior from the actual codebase before documenting or
+                  changing it.
+                </li>
+                <li>
+                  Agents must never read, create, edit, delete, move, stage,
+                  commit, or otherwise touch <code>todo.txt</code>; only the
+                  user may modify it manually.
+                </li>
+                <li>
+                  Prefer amending small, related corrections into the relevant
+                  current branch commit instead of creating separate fixup,
+                  chore, or cleanup commits.
+                </li>
+                <li>
+                  Keep <code>AGENTS.md</code> as instructions, not as a
+                  changelog, diary, or work log.
+                </li>
+                <li>
+                  Do not add update notes, status logs, or change summaries to
+                  <code>AGENTS.md</code>.
+                </li>
+              </ul>
+              <h2 id="security-and-compliance">
+                Security and Compliance<a
+                  class="headerlink"
+                  href="#security-and-compliance"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  Never commit secrets, credentials, tokens, or private keys.
+                </li>
+                <li>
+                  Verify new dependencies, automation, and scripts before
+                  trusting them.
+                </li>
+              </ul>
+              <h2 id="dependencies-and-services">
+                Dependencies and Services<a
+                  class="headerlink"
+                  href="#dependencies-and-services"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  GitHub Pages hosts the generated <code>site/</code> output.
+                </li>
+                <li>
+                  Zensical is the Python docs generator used by local builds and
+                  CI.
+                </li>
+                <li>
+                  npm dev dependencies provide Husky and commitlint for local
+                  git workflows.
+                </li>
+                <li>
+                  No database, queue, or other runtime service is defined in the
+                  repo.
+                </li>
+              </ul>
+              <h2 id="troubleshooting">
+                Troubleshooting<a
+                  class="headerlink"
+                  href="#troubleshooting"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  If repo behavior is unclear, inspect tracked files and git
+                  history before making assumptions.
+                </li>
+                <li>
+                  If a generated or managed file changes unexpectedly, verify
+                  which tool owns it before editing.
+                </li>
+                <li>
+                  If <code>docbuild</code> fails immediately, verify the chosen
+                  working directory contains <code>.venv/bin/activate</code>.
+                </li>
+                <li>
+                  If <code>zensical</code> or <code>pretty</code> is missing,
+                  activate <code>.venv/</code> and confirm the required commands
+                  are installed on <code>PATH</code>.
+                </li>
+                <li>
+                  If <code>pretty</code> is still missing, verify the sibling
+                  <code>../prettiermod/cbc-module.sh</code> module exists and
+                  can be sourced.
+                </li>
+                <li>
+                  If you run <code>docbuild</code> outside a git repo, it
+                  prompts before proceeding and skips git commit or push.
+                </li>
+                <li>
+                  If <code>gum</code> is missing, <code>docbuild</code> still
+                  runs but without spinner UI.
+                </li>
+                <li>
+                  If the commit hook fails, run <code>npm install</code> to
+                  restore the local commitlint tooling.
+                </li>
+              </ul>
+              <h2 id="refining-existing-agentsmd">
+                Refining Existing AGENTS.md<a
+                  class="headerlink"
+                  href="#refining-existing-agentsmd"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  Re-check every statement against the repository before keeping
+                  it.
+                </li>
+                <li>Remove stale, duplicated, or vague guidance.</li>
+                <li>
+                  Replace placeholders with exact commands, paths, and verified
+                  workflows.
+                </li>
+                <li>
+                  Update the tracked file list when tracked files or
+                  generated-output directories change.
+                </li>
+                <li>Keep bullets short and easy for AI agents to scan.</li>
+                <li>Preserve this section order when improving the file.</li>
+              </ul>
+              <h2 id="maintenance">
+                Maintenance<a
+                  class="headerlink"
+                  href="#maintenance"
+                  title="Permanent link"
+                  >&para;</a
+                >
+              </h2>
+              <ul>
+                <li>
+                  After any code, config, or doc change, verify that
+                  <code>AGENTS.md</code> still matches the repository.
+                </li>
+                <li>
+                  Re-scan tracked files, commands, and deployment workflows
+                  during each self-audit loop.
+                </li>
+                <li>
+                  When <code>AGENTS.md</code> needs an update, make it in a
+                  separate <code>docs</code> Conventional Commit such as
+                  <code>docs(agents): update repo instructions</code>.
+                </li>
+                <li>
+                  Keep <code>AGENTS.md</code> out of mixed code commits whenever
+                  possible.
+                </li>
+                <li>
+                  Remove stale instructions instead of appending historical
+                  notes.
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <script>
+            var tabs = __md_get("__tabs");
+            if (Array.isArray(tabs))
+              e: for (var set of document.querySelectorAll(".tabbed-set")) {
+                var labels = set.querySelector(".tabbed-labels");
+                for (var tab of tabs)
+                  for (var label of labels.getElementsByTagName("label"))
+                    if (label.innerText.trim() === tab) {
+                      var input = document.getElementById(label.htmlFor);
+                      input.checked = !0;
+                      continue e;
+                    }
+              }
+          </script>
+
+          <script>
+            var target = document.getElementById(location.hash.slice(1));
+            target &&
+              target.name &&
+              (target.checked = target.name.startsWith("__tabbed_"));
+          </script>
         </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
-  Back to top
-</button>
-        
+
+        <button
+          type="button"
+          class="md-top md-icon"
+          data-md-component="top"
+          hidden
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="lucide lucide-circle-arrow-up"
+            viewBox="0 0 24 24"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="m16 12-4-4-4 4M12 16V8" />
+          </svg>
+          Back to top
+        </button>
       </main>
-      
-        <footer class="md-footer">
-  
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="./.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Docsmod">
+
+      <footer class="md-footer">
+        <nav class="md-footer__inner md-grid" aria-label="Footer">
+          <a
+            href="./.."
+            class="md-footer__link md-footer__link--prev"
+            aria-label="Previous: Docsmod"
+          >
             <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="lucide lucide-arrow-left"
+                viewBox="0 0 24 24"
+              >
+                <path d="m12 19-7-7 7-7M19 12H5" />
+              </svg>
             </div>
             <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Docsmod
-              </div>
+              <span class="md-footer__direction"> Previous </span>
+              <div class="md-ellipsis">Docsmod</div>
             </div>
           </a>
-        
-        
-      </nav>
-    
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      Copyright &copy; 2026 The authors
+        </nav>
 
-    </div>
-  
-  
-    Made with
-    <a href="https://zensical.org/" target="_blank" rel="noopener">
-      Zensical
-    </a>
-  
-</div>
-      
-    </div>
-  </div>
-</footer>
-      
+        <div class="md-footer-meta md-typeset">
+          <div class="md-footer-meta__inner md-grid">
+            <div class="md-copyright">
+              <div class="md-copyright__highlight">
+                Copyright &copy; 2026 The authors
+              </div>
+
+              Made with
+              <a href="https://zensical.org/" target="_blank" rel="noopener">
+                Zensical
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    
-    
-    
-      
-      
-      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.b6b7e04f.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
-    
-    
-      <script src="../assets/javascripts/bundle.ee611ef6.min.js"></script>
-      
-    
+
+    <script id="__config" type="application/json">
+      {
+        "annotate": null,
+        "base": "..",
+        "features": [
+          "announce.dismiss",
+          "content.code.annotate",
+          "content.code.copy",
+          "content.code.select",
+          "content.footnote.tooltips",
+          "content.tabs.link",
+          "content.tooltips",
+          "navigation.footer",
+          "navigation.indexes",
+          "navigation.instant",
+          "navigation.instant.prefetch",
+          "navigation.path",
+          "navigation.sections",
+          "navigation.top",
+          "navigation.tracking",
+          "search.highlight"
+        ],
+        "search": "../assets/javascripts/workers/search.b6b7e04f.min.js",
+        "tags": null,
+        "translations": {
+          "clipboard.copied": "Copied to clipboard",
+          "clipboard.copy": "Copy to clipboard",
+          "search.result.more.one": "1 more on this page",
+          "search.result.more.other": "# more on this page",
+          "search.result.none": "No matching documents",
+          "search.result.one": "1 matching document",
+          "search.result.other": "# matching documents",
+          "search.result.placeholder": "Type to start searching",
+          "search.result.term.missing": "Missing",
+          "select.version": "Select version"
+        },
+        "version": null
+      }
+    </script>
+
+    <script src="../assets/javascripts/bundle.ee611ef6.min.js"></script>
   </body>
 </html>
