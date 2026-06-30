@@ -40,8 +40,9 @@ configs, or release automation.
   provide `zensical`.
 - When `pretty` is not already loaded, `docbuild` auto-loads the sibling
   CBC module at `../prettiermod/cbc-module.sh`.
-- `docbuild` uses `gum confirm` for non-repo confirmation when `gum` is
-  available and falls back to a shell prompt otherwise.
+- `docbuild` uses `gum confirm` for non-repo confirmation and
+  `gum spin` for git-step progress when `gum` is available; it falls
+  back to a shell prompt and direct execution otherwise.
 - Verification needed: pin the exact local Python and Node.js versions.
 
 ## Repository Overview
@@ -97,7 +98,8 @@ configs, or release automation.
 - `docbuild`: if run inside a git repo, switch to the repo root,
   activate `.venv/`, run `zensical build --clean`, run
   `pretty all -d site -- --no-error-on-unmatched-pattern`, commit only
-  `site/`, and push the current branch.
+  `site/`, and push the current branch with `gum` spinners for git
+  operations when available.
 - `docbuild`: if run outside a git repo, warn, confirm with `gum` when
   available, fall back to a shell prompt otherwise, and proceed in the
   current directory.
@@ -178,6 +180,7 @@ configs, or release automation.
   `../prettiermod/cbc-module.sh` module exists and can be sourced.
 - If you run `docbuild` outside a git repo, it prompts before
   proceeding and skips git commit or push.
+- If `gum` is missing, `docbuild` still runs but without spinner UI.
 - If the commit hook fails, run `npm install` to restore the local
   commitlint tooling.
 
